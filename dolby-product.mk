@@ -37,6 +37,11 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.product.device.db=OP_DEVICE \
     ro.vendor.product.manufacturer.db=OP_PHONE
 
+# Dolby VNDK blobs
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
+    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
+
 # Dolby Proprietary blobs
 PRODUCT_COPY_FILES += \
     vendor/dolby/proprietary/system_ext/etc/permissions/privapp-com.dolby.daxappui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-com.dolby.daxappui.xml \
