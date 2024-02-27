@@ -6,6 +6,10 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/dolby
 
+# SEPolicy Private
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+    vendor/dolby/sepolicy/private
+
 # SEPolicy Vendor
 BOARD_VENDOR_SEPOLICY_DIRS += \
     vendor/dolby/sepolicy/vendor
