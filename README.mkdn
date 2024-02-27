@@ -1,0 +1,31 @@
+OnePlus Dolby for MSM8953 Devices
+==============
+
+OnePlus Dolby Atmos that supports Dolby Digital Plus codecs. [AC3 | EAC3 | EAC3-JOC]
+
+Getting Started
+
+---------------
+Clone the repository :-
+
+```bash
+git clone https://github.com/Astridxx/vendor_dolby.git vendor/dolby
+```
+
+Make sure you are not using any audio effect configuration in your device trees. Also for dolby media codecs to work add this line in your media codecs config (should be in vendor partition) :-
+
+```bash
+<Include href="media_codecs_dolby_audio.xml" />
+```
+
+To build, add the dolby effects in your device's audio effects config then inherit the dolby config by adding this in your device's makefile :-
+
+```bash
+$(call inherit-product, vendor/dolby/dolby-product.mk)
+```
+
+Patches required on the device tree side (Example) :-
+
+[kuntao: Add Dolby Atmos support [SQUASH]](https://github.com/Astridxx/android_device_lenovo_kuntao/commit/afe4615e6c61b2f27d1ab92304018f4f85acf292)
+
+
