@@ -6,12 +6,26 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/dolby
 
+# Enable Codec support
+AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
+
 # Dolby Manifest
 PRODUCT_PACKAGES += \
     manifest_vendor.dolby.hardware.dms
 
+# DaxUI and daxService
+PRODUCT_PACKAGES += \
+    DaxUI \
+    daxService
+
 # Dolby Properties
 PRODUCT_VENDOR_PROPERTIES += \
+    vendor.audio.dolby.ds2.enabled=true \
+    vendor.audio.dolby.ds2.hardbypass=false \
+    ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 \
+    ro.vendor.audio.dolby.dax.version=DAX3_3.6 \
+    ro.vendor.audio.dolby.dax.support=true \
+    ro.vendor.audio.dolby.surround.enable=true \
     ro.vendor.product.device.db=OP_DEVICE \
     ro.vendor.product.manufacturer.db=OP_PHONE
 
