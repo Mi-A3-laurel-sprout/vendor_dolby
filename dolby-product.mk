@@ -6,6 +6,10 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/dolby
 
+# SEPolicy Vendor
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    vendor/dolby/sepolicy/vendor
+
 # Enable Codec support
 AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
 
