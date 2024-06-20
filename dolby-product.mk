@@ -17,10 +17,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
 # Enable Codec support
 AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
 
-# Dolby Manifest
-PRODUCT_PACKAGES += \
-    manifest_vendor.dolby.hardware.dms
-
 # DaxUI and daxService
 PRODUCT_PACKAGES += \
     DaxUI \
